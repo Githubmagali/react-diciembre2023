@@ -5,7 +5,21 @@ import Header from './componentes/Header';
 import ListaDeNotas from './componentes/ListaDeNotas';
 
 const App = () => {
-  const [notas, cambiarNotas] = useState([]);
+  const [notas, cambiarNotas] = useState([
+    {
+      id:1,
+      texto: 'pasear a ciro',
+      completada:false
+
+    },
+    {
+      id:2,
+      texto: 'pasear a ciro',
+      completada:false
+
+    }
+
+  ]);
 
   return (
     <div className="contenedor">

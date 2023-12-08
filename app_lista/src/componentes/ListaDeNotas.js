@@ -6,10 +6,20 @@ const ListaDeNotas = ({ notas, cambiarNotas }) => {
     return <p>No hay notas disponibles.</p>;
   }
 
+  const toggleCompletada = (id)=>{
+    console.log('Seleccionamos el check de v o f', id)
+    cambiarNotas(notas.map((nota)=>{
+   if (nota.id === id){
+      return {...nota, completada: !nota.completada}
+   }
+   return nota;
+    }));
+  };
+
   return (
     <ul>
       {notas.map((nota, index) => (
-        <Nota key={index} notas={notas} cambiarNotas={cambiarNotas} index={index} />
+        <Nota key={nota.id} notas={notas} cambiarNotas={cambiarNotas} index={index }toggleCompletada={toggleCompletada} />
       ))}
     </ul>
   );

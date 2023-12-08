@@ -1,9 +1,17 @@
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCheckSquare, faEdit, faTimes } from '@fortawesome/free-solid-svg-icons';
+import { faCheckSquare, faEdit, faTimes, faSquare } from '@fortawesome/free-solid-svg-icons';
 
-const Nota = ({ notas, cambiarNotas, index }) => {
+const Nota = ({ notas, cambiarNotas, index, toggleCompletada }) => {
   const [editarNota, cambiarEditarNota] = useState(false);
+ const[nuevaNota, cambiarNuevaNota]= useState(notas[index].texto);
+
+
+ const handleSubmit = (e)=>{
+e.prevent.default();
+cambiarEditarNota(false);
+
+ }
 
   const eliminarNota = () => {
     const nuevasNotas = [...notas];
@@ -12,11 +20,13 @@ const Nota = ({ notas, cambiarNotas, index }) => {
   };
 
   return (
-    <li>
-      <FontAwesomeIcon icon={faCheckSquare} />
+    <li className="lista-nota__tarea">
+      <FontAwesomeIcon icon={notas[index].completada ? faCheckSquare : faSquare}
+       className="lista-nota__icono lista-nota__icono-check"
+       onClick={()=>{toggleCompletada(notas[index].id)}}/>
       {editarNota ? (
-        <form action="">
-          <input type="text" />
+        <form action="" onSubmit={handleSubmit}>
+          <input type="text" value={nuevaNota}  onChange={(e)=>cambiarNuevaNota(e.target.value)}/>
           <button type="submit">Actualizar</button>
         </form>
       ) : (
@@ -24,7 +34,7 @@ const Nota = ({ notas, cambiarNotas, index }) => {
       )}
 
       <div>
-        <FontAwesomeIcon icon={faEdit} />
+        <FontAwesomeIcon icon={faEdit} onClick={()=>{cambiarEditarNota(!editarNota)}} />
         <FontAwesomeIcon onClick={eliminarNota} icon={faTimes} />
       </div>
     </li>
