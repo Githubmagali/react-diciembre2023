@@ -20,7 +20,7 @@ const Formulario = ({ notas, cambiarNotas }) => {
         completada: false
       }
     ]);
-    cambiarTextoNota('');
+    cambiarTextoNota(''); //refresca el input y lo deja vacio
   };
 
   return (
