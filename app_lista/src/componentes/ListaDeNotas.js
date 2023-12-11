@@ -5,9 +5,6 @@ const ListaDeNotas = ({ notas, cambiarNotas, mostrarNotas }) => {
   if (!notas || !notas.length) {
     return <p className='lista-nota__mensaje'>No hay notas disponibles.</p>;
   }
-  
-  const notasFiltradas = mostrarNotas ? notas : notas.filter(nota => !nota.completada);
-  
 
   const toggleCompletada = (id) => {
     cambiarNotas(
@@ -39,11 +36,11 @@ const ListaDeNotas = ({ notas, cambiarNotas, mostrarNotas }) => {
 
   return (
     <ul className='lista-nota'>
-      {notasFiltradas.map((nota, index) => {
+      {notas.map((nota, index) => {
         if(mostrarNotas){
         return (
          <Nota key={nota.id} 
-        notas={notasFiltradas}
+        notas={notas}
          cambiarNotas={cambiarNotas}
          index={index }
         toggleCompletada={toggleCompletada}

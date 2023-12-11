@@ -12,9 +12,9 @@ const toggleCompletada = ()=>{
         <header>
             <h1>Notas</h1>
             {mostrarNotas ?
-             <div>Ver solo las completadas  <FontAwesomeIcon icon={faEyeSlash}onClick={()=>toggleCompletada()} /></div>
+             <div> <FontAwesomeIcon icon={faEye}onClick={()=>toggleCompletada()} /></div>
               :
-              <div>Ver todas las notas  <FontAwesomeIcon icon={faEye} onClick={()=>toggleCompletada()} /></div>
+              <div> <FontAwesomeIcon icon={faEyeSlash} onClick={()=>toggleCompletada()} /></div>
             }
          
         </header>
