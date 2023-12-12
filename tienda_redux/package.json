@@ -1,5 +1,5 @@
 {
-  "name": "app_tienda",
+  "name": "tienda_redux",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

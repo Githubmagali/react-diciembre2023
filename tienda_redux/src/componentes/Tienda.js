@@ -1,7 +1,7 @@
 import React from "react";
 import Productos from './../componentes/Productos'
 
-const Tienda =({productos, carrito, cambiarCarrito})=>{
+const Tienda =({ carrito, cambiarCarrito})=>{
     const agregarProductoAlCarrito = (idProducto, nombre) => {
         const yaEstaEnCarrito = carrito.some((producto) => producto.id === idProducto);
       
@@ -9,7 +9,7 @@ const Tienda =({productos, carrito, cambiarCarrito})=>{
           cambiarCarrito((pCarrito) =>
             pCarrito.map((producto) =>
               producto.id === idProducto
-                ? { ...producto, cantidad: Math.min(100,producto.cantidad + 1)  }
+                ? { ...producto, cantidad: Math.min(100, producto.cantidad + 1) }
                 : producto
             )
           );
@@ -20,6 +20,8 @@ const Tienda =({productos, carrito, cambiarCarrito})=>{
           ]);
         }
       };
+
+
       const quitarProductoAlCarrito = (idProducto, nombre) => {
         const yaEstaEnCarrito = carrito.some((producto) => producto.id === idProducto);
       
@@ -40,8 +42,8 @@ const Tienda =({productos, carrito, cambiarCarrito})=>{
       };
     return(
         <div>
-        <h1>Tienda</h1>
-        <Productos productos={productos} agregarProductoAlCarrito={agregarProductoAlCarrito} quitarProductoAlCarrito={quitarProductoAlCarrito}/>
+        <h1 className="texto-centro">Tienda</h1>
+        <Productos agregarProductoAlCarrito={agregarProductoAlCarrito} quitarProductoAlCarrito={quitarProductoAlCarrito}/>
         </div>
     );
 }
