@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { NavLink, Routes, Route } from "react-router-dom";
 import Tienda from './componentes/Tienda';
 import Error404 from './componentes/Error404';
@@ -9,10 +9,7 @@ import reducer from "./reducers/tiendaReducer";
 
 const App = () => {
 
-    const [carrito, cambiarCarrito] = useState([]);
-
     const store = createStore(reducer);
-  console.log(store.getState);
     return (
         <Provider store={store}>
             <div className="contenedor">
@@ -23,11 +20,11 @@ const App = () => {
                 <main>
                     <Routes>
                         <Route path="*" element={<Error404 />} />
-                        <Route path="/" element={<Tienda  carrito={carrito} cambiarCarrito={cambiarCarrito} />} />
+                        <Route path="/" element={<Tienda />} />
                     </Routes>
                 </main>
                 <aside>
-                    <Carrito carrito={carrito} cambiarCarrito={cambiarCarrito} />
+                    <Carrito  />
                 </aside>
             </div>
         </Provider>

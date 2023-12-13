@@ -1,5 +1,6 @@
 import React from "react";
 import './../App.css';
+import { connect } from "react-redux";
 
 const Carrito =({carrito})=>{
     return(
@@ -20,5 +21,9 @@ const Carrito =({carrito})=>{
         </div>
     );
 }
-
-export default Carrito;
+const mapStateToProps = (estado)=>{
+  return {
+      carrito: estado.carrito
+  }
+}
+export default connect(mapStateToProps)(Carrito);
