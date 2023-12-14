@@ -6,6 +6,7 @@ import Carrito from './componentes/Carrito';
 import { Provider } from "react-redux";
 import {createStore} from 'redux';
 import reducer from "./reducers/tiendaReducer";
+import Inicio from './componentes/Inicio'
 
 const App = () => {
 
@@ -14,13 +15,15 @@ const App = () => {
         <Provider store={store}>
             <div className="contenedor">
                 <nav className="menu">
-
-                    <NavLink to="/" className="a">Tienda</NavLink>
+                    <NavLink to="/" className="a">Inicio</NavLink>
+                    <NavLink to="/tienda" className="a">Tienda</NavLink>
+                
                 </nav>
                 <main>
                     <Routes>
                         <Route path="*" element={<Error404 />} />
-                        <Route path="/" element={<Tienda />} />
+                        <Route path="/tienda" element={<Tienda />} />
+                        <Route path="/" element={<Inicio />} />
                     </Routes>
                 </main>
                 <aside>
