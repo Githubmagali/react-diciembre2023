@@ -1,8 +1,10 @@
 import React from "react";
 import './../App.css';
 import { connect } from "react-redux";
+import { calcularTotalCarrito } from './../reducers/tiendaReducer';
 
-const Carrito =({carrito})=>{
+
+const Carrito =({carrito, totalCarrito})=>{
     return(
         <div >
         <h1 className="texto-centro">Carrito</h1>
@@ -18,12 +20,14 @@ const Carrito =({carrito})=>{
         })
         : <p className="texto-centro">No hay productos</p>
         }
+        <p className="texto-centro">Total en el carrito: {totalCarrito}</p>
         </div>
     );
 }
 const mapStateToProps = (estado)=>{
   return {
-      carrito: estado.carrito
+      carrito: estado.carrito,
+      totalCarrito: calcularTotalCarrito(estado.carrito)
   }
 }
 export default connect(mapStateToProps)(Carrito);

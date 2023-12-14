@@ -13,6 +13,10 @@ const initialState = {
     ]
 };
 
+const calcularTotalCarrito = (carrito) => {
+    return carrito.reduce((total, producto) => total + producto.cantidad, 0);
+};
+
 const reducer = (estado = initialState, accion) => {
     try {
         switch (accion.type) {
@@ -52,5 +56,5 @@ const reducer = (estado = initialState, accion) => {
     }
 };
 
-
 export default reducer;
+export { calcularTotalCarrito };

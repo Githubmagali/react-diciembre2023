@@ -8,6 +8,7 @@ import {createStore} from 'redux';
 import reducer from "./reducers/tiendaReducer";
 import Inicio from './componentes/Inicio'
 
+
 const App = () => {
 
     const store = createStore(reducer);
