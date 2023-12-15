@@ -1,3 +1,11 @@
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; 
+}
+
+/* App */
+
 .App {
   text-align: center;
 }
@@ -37,6 +45,7 @@
   }
 }
 
+/* Productos*/
 
 .contenedor-productos{
   display: grid;
@@ -77,6 +86,10 @@
 /* Carrito*/
 
 
+.contenedor-carrito {
+  flex: 1; 
+}
+
 .carrito-producto{
   padding: 10px;
 border-bottom: 1px solid #ebebf3;
@@ -90,6 +103,10 @@ font-size: 14px;
 }
 
 .texto-centro{
+  text-align: center;
+}
+.footer-carrito{
+  margin-top: 160px; /* Empuja el footer hacia la parte inferior */
   text-align: center;
 }
 
