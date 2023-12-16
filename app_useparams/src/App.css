@@ -1,0 +1,89 @@
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f8f6f6d0;
+  border-radius: 20px; 
+  box-shadow: 0px 0px 5px rgba(129, 129, 129, 0.1);
+}
+/* Inicio */
+
+.inicio-contenedor{
+  text-align: center;
+}
+
+
+/* App */
+
+.app-contenedor{
+  height: 100vh;
+  text-align: center;
+}
+
+.app-main{
+  background: #fff;
+padding: 40px;
+border-radius: 10px;
+box-shadow: 0px 0px 5px rgba(129, 129, 129, 0.1);
+}
+
+
+ /* header */
+
+ .header-contenedor{
+  text-align: center;
+margin-bottom: 40px;
+ }
+
+ .header-titulo{
+  margin-bottom: 10px;
+font-size: 26px;
+text-transform: uppercase;
+ }
+
+ .header-nav{
+  a{
+    text-decoration: none;
+    color: #165168;
+    margin: 0 10px;
+}
+a:hover{
+    color:#161968;
+}
+a.active{
+    border-bottom: 2px solid #165168;
+    padding-bottom: 3px;
+}
+ }
+
+/*Blog*/
+
+.blog-div{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ 
+}
+.blog-div a {
+  text-decoration: none;
+  padding: 10px;
+}
+
+.blog-div a:hover {
+  text-decoration: none; 
+}
+.blog-boton a{
+  text-decoration: none;
+  color: black;
+
+ }
+.blog-boton{
+  margin-top: 200px;
+ 
+} 
+
+
+/* Acerca de */
+
