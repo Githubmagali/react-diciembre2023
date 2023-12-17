@@ -92,3 +92,21 @@ font-size: 14px;
 .texto-centro{
   text-align: center;
 }
+
+/*Fake */
+
+.btn-fake-dark-mode {
+  position: fixed;
+  top: 0;
+  right: 0;
+  padding: 16px;
+  line-height: 1;
+  font-size: 26px;
+  background-color: #ffe8cc;
+  border: none;
+}
+
+.fake-dark-mode {
+  filter: invert(100%);
+  transition: all 0.5s;
+}

@@ -1,6 +1,5 @@
 import React from "react";
-import './../App.css';
-
+import './../index.css';
 
 const Footer = () => {
     const hour = new Date().getHours();
@@ -16,7 +15,7 @@ const Footer = () => {
   (
     <Order closeHour={closeHour} openHour={openHour} />
   ) : (
-    <p>
+    <p className="footer-p">
     We're happy to welcome you between {openHour}:00 and {closeHour}:00.
   </p>
   )
@@ -26,8 +25,8 @@ const Footer = () => {
 }
 function Order ({closeHour, openHour}){
     return(
-        <div className="order">
-            <p>
+        <div className="footer-order">
+            <p className="footer-p">
         We're open from {openHour}:00 to {closeHour}:00. Come visit us or order
         online.
       </p>
