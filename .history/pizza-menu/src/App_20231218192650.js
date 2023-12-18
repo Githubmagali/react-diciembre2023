@@ -1,6 +1,10 @@
 import React from "react";
-import "./../App.css";
-import PizzaItem from "./PizzaItem";
+import "./App.css";
+import Footer from "./componentes/Footer";
+import Header from "./componentes/Header";
+import Menu from "./componentes/Menu";
+import { CartProvider } from "./CartContext";
+import CartDisplay from "./componentes/CartDisplay";
 
 const pizzaData = [
   {
@@ -47,27 +51,17 @@ const pizzaData = [
   },
 ];
 
-const Menu = () => {
+function App() {
   return (
-    <main className="menu">
-      <h2>Our menu</h2>
-      {pizzaData.length > 0 ? (
-        <>
-          <p>
-            Authentic Italian cuisine. 6 creative dishes to choose from. All
-            from our stone oven, all organic, all delicious.
-          </p>
-          <ul className="pizzas">
-            {pizzaData.map((pizza) => (
-              <PizzaItem pizzaObj={pizza} key={pizza.name} />
-            ))}
-          </ul>
-        </>
-      ) : (
-        <p>We're still working on our menu. Please come back later...</p>
-      )}
-    </main>
+    <CartProvider>
+      <div className="App">
+        <Header />
+        <Menu PizzaData={pizzaData} />
+        <CartDisplay />
+        <Footer />
+      </div>
+    </CartProvider>
   );
-};
+}
 
-export default Menu;
+export default App;

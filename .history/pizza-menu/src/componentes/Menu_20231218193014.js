@@ -58,7 +58,7 @@ const Menu = () => {
             from our stone oven, all organic, all delicious.
           </p>
           <ul className="pizzas">
-            {pizzaData.map((pizza) => (
+            {pizzas.map((pizza) => (
               <PizzaItem pizzaObj={pizza} key={pizza.name} />
             ))}
           </ul>
