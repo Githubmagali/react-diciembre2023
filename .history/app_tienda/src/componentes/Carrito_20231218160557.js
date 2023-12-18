@@ -2,7 +2,6 @@ import React from "react";
 import './../App.css';
 
 const Carrito =({carrito})=>{
-  
     return(
         <div >
         <h1 className="texto-centro">Carrito</h1>
