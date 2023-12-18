@@ -40,4 +40,4 @@ const Tienda = ({ productos }) => {
   );
 };
 
-export default Tienda;
+export default Productos;

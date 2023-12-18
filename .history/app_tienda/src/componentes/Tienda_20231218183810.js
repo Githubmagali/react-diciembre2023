@@ -7,6 +7,7 @@ const Productos = ({ productos }) => {
 
   return (
     <div>
+      <h1>Tienda</h1>
       <p> Estos son los productos</p>
       <div className="contenedor-productos">
         {productos.map((producto, index) => {

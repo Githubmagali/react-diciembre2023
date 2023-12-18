@@ -2,7 +2,7 @@ import React from "react";
 import "./../App.css";
 import { useCart } from "../CartContext";
 
-const Tienda = ({ productos }) => {
+const Productos = ({ productos }) => {
   const { addToCart, removeFromCart } = useCart();
 
   return (
@@ -40,4 +40,4 @@ const Tienda = ({ productos }) => {
   );
 };
 
-export default Tienda;
+export default Productos;
