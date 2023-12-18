@@ -4,7 +4,7 @@ import Footer from "./componentes/Footer";
 import Header from "./componentes/Header";
 import Menu from "./componentes/Menu";
 import { CartProvider } from "./CartContext";
-// import CartDisplay from "./componentes/CartDisplay";
+import CartDisplay from "./componentes/CartDisplay";
 
 const pizzaData = [
   {
@@ -57,7 +57,7 @@ function App() {
       <div className="App">
         <Header />
         <Menu PizzaData={pizzaData} />
-        {/* <CartDisplay /> */}
+        <CartDisplay /> Include CartDisplay
         <Footer />
       </div>
     </CartProvider>

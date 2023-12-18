@@ -1,10 +1,8 @@
-import React from "react";
-import "./App.css";
-import Footer from "./componentes/Footer";
-import Header from "./componentes/Header";
-import Menu from "./componentes/Menu";
-import { CartProvider } from "./CartContext";
-// import CartDisplay from "./componentes/CartDisplay";
+import React  from 'react';
+import './App.css';
+import Footer from './componentes/Footer';
+import Header from './componentes/Header';
+import Menu from './componentes/Menu';
 
 const pizzaData = [
   {
@@ -38,7 +36,7 @@ const pizzaData = [
   {
     name: "Pizza Salamino",
     ingredients: "Tomato, mozarella, and pepperoni",
-    price: 15,
+    price:  15,
     photoName: "pizzas/salamino.jpg",
     soldOut: true,
   },
@@ -51,16 +49,15 @@ const pizzaData = [
   },
 ];
 
+
+
 function App() {
   return (
-    <CartProvider>
-      <div className="App">
-        <Header />
-        <Menu PizzaData={pizzaData} />
-        {/* <CartDisplay /> */}
-        <Footer />
-      </div>
-    </CartProvider>
+    <div className="App">
+     <Header />
+     <Menu PizzaData={pizzaData}/>
+     <Footer />
+    </div>
   );
 }
 
