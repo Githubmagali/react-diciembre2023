@@ -14,6 +14,7 @@ const PRODUCTOS = [
 ];
 
 const App = () => {
+  //   const [carrito, cambiarCarrito] = useState([]);
   const [isFakeDark, setIsFakeDark] = useState(false);
 
   useEffect(() => {
@@ -42,11 +43,21 @@ const App = () => {
           <Routes>
             <Route path="*" element={<Error404 />} />
             <Route path="/" element={<Inicio />} />
-            <Route path="/tienda" element={<Tienda productos={PRODUCTOS} />} />
+            <Route
+              path="/tienda"
+              element={
+                <Tienda
+                  productos={PRODUCTOS}
+                  //   carrito={carrito}
+                  //   cambiarCarrito={cambiarCarrito}
+                />
+              }
+            />
           </Routes>
         </main>
         <aside>
-          <Carrito />
+          <Carrito
+          />
         </aside>
       </div>
     </CartProvider>

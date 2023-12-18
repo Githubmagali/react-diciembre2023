@@ -4,6 +4,7 @@ import { useCart } from "../CartContext"; // Import useCart
 
 const Carrito = () => {
   const { cart } = useCart(); // Use Cart Context
+  console.log("cart", cart);
   return (
     <div>
       <h1 className="texto-centro">Carrito</h1>

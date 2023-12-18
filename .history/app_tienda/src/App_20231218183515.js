@@ -14,6 +14,7 @@ const PRODUCTOS = [
 ];
 
 const App = () => {
+  //   const [carrito, cambiarCarrito] = useState([]);
   const [isFakeDark, setIsFakeDark] = useState(false);
 
   useEffect(() => {
