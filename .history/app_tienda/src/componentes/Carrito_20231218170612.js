@@ -1,12 +1,12 @@
 import React from "react";
 import "./../App.css";
-import { useCart } from "../CartContext"; // Import useCart
+import { useCart } from "./CartContext"; // Import useCart
 
 const Carrito = () =>
   // {carrito}
   {
     const { cart } = useCart(); // Use Cart Context
-    console.log("cart", cart);
+
     return (
       <div>
         <h1 className="texto-centro">Carrito</h1>
@@ -15,7 +15,7 @@ const Carrito = () =>
             return (
               <div className="carrito-producto" key={index}>
                 <p className="carrito-p">{producto.nombre}</p>
-                Cantidad {producto.quantity}
+                Cantidad {producto.cantidad}
               </div>
             );
           })

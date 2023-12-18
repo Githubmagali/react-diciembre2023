@@ -6,7 +6,7 @@ const Carrito = () =>
   // {carrito}
   {
     const { cart } = useCart(); // Use Cart Context
-    console.log("cart", cart);
+    console.log("")
     return (
       <div>
         <h1 className="texto-centro">Carrito</h1>

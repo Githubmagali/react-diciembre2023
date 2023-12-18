@@ -28,7 +28,7 @@ const Productos = ({
               <button
                 className="boton"
                 onClick={(e) => {
-                  removeFromCart(producto.id);
+                  removeFromCart(producto);
                 }}
               >
                 -

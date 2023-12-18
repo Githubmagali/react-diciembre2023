@@ -20,7 +20,7 @@ const Productos = ({
               <button
                 className="boton"
                 onClick={(e) => {
-                  addToCart(producto);
+                    addToCart(producto.id, producto.nombre);
                 }}
               >
                 +
@@ -28,7 +28,7 @@ const Productos = ({
               <button
                 className="boton"
                 onClick={(e) => {
-                  removeFromCart(producto.id);
+                  quitarProductoAlCarrito(producto.id, producto.nombre);
                 }}
               >
                 -

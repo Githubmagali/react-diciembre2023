@@ -6,7 +6,7 @@ const Carrito = () =>
   // {carrito}
   {
     const { cart } = useCart(); // Use Cart Context
-    console.log("cart", cart);
+
     return (
       <div>
         <h1 className="texto-centro">Carrito</h1>
@@ -14,7 +14,7 @@ const Carrito = () =>
           cart.map((producto, index) => {
             return (
               <div className="carrito-producto" key={index}>
-                <p className="carrito-p">{producto.nombre}</p>
+                <p className="carrito-p">{producto.name}</p>
                 Cantidad {producto.quantity}
               </div>
             );

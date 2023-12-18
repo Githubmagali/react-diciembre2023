@@ -1,5 +1,6 @@
 import React from "react";
 import Productos from "./../componentes/Productos";
+import { useCart } from "../CartContext"; // Import useCart
 
 const Tienda = ({
   productos,

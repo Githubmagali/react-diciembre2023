@@ -1,10 +1,13 @@
 import React from "react";
 import Productos from "./../componentes/Productos";
+import { useCart } from "../CartContext"; // Import useCart
 
 const Tienda = ({
   productos,
   // , carrito, cambiarCarrito
 }) => {
+  const { addToCart, removeFromCart } = useCart(); // Use Cart Context
+
   // const agregarProductoAlCarrito = (idProducto, nombre) => {
   //   const yaEstaEnCarrito = carrito.some(
   //     (producto) => producto.id === idProducto
