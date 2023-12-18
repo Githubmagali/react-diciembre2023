@@ -1,5 +1,5 @@
 import React from "react";
-import { useCart } from "../CartContext"; // Import useCart
+import { useCart } from "./CartContext"; // Import useCart
 
 function PizzaItem({ pizzaObj }) {
   const { addToCart } = useCart(); // Use Cart Context
