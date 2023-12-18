@@ -48,17 +48,16 @@ const App = () => {
               element={
                 <Tienda
                   productos={PRODUCTOS}
-                  //   carrito={carrito}
-                  //   cambiarCarrito={cambiarCarrito}
+                  carrito={carrito}
+                  cambiarCarrito={cambiarCarrito}
                 />
               }
             />
           </Routes>
         </main>
         <aside>
-          <Carrito
-          //   carrito={carrito} cambiarCarrito={cambiarCarrito}
-          />
+          <Carrito 
+          carrito={carrito} cambiarCarrito={cambiarCarrito} />
         </aside>
       </div>
     </CartProvider>

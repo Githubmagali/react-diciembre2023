@@ -54,7 +54,7 @@ const Tienda = ({
       <Productos
         productos={productos}
         agregarProductoAlCarrito={addToCart}
-        quitarProductoAlCarrito={removeFromCart}
+        quitarProductoAlCarrito={quitarProductoAlCarrito}
       />
     </div>
   );

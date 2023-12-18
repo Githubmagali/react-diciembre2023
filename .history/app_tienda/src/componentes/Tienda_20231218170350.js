@@ -53,8 +53,8 @@ const Tienda = ({
       <h1>Tienda</h1>
       <Productos
         productos={productos}
-        agregarProductoAlCarrito={addToCart}
-        quitarProductoAlCarrito={removeFromCart}
+        agregarProductoAlCarrito={agregarProductoAlCarrito}
+        quitarProductoAlCarrito={quitarProductoAlCarrito}
       />
     </div>
   );

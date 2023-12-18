@@ -48,8 +48,8 @@ const App = () => {
               element={
                 <Tienda
                   productos={PRODUCTOS}
-                  //   carrito={carrito}
-                  //   cambiarCarrito={cambiarCarrito}
+                  carrito={carrito}
+                  cambiarCarrito={cambiarCarrito}
                 />
               }
             />
