@@ -3,7 +3,7 @@ import "./../App.css";
 import { useCart } from "../CartContext"; // Import useCart
 
 const Carrito = () => {
-  const { cart, calcularElTotal } = useCart(); // Use Cart Context
+  const { cart, calculateTotal } = useCart(); // Use Cart Context
   return (
     <div>
       <h1 className="texto-centro">Carrito</h1>
@@ -15,7 +15,7 @@ const Carrito = () => {
               Cantidad {producto.quantity}
             </div>
           ))}
-          <p className="texto-centro">Total de productos agregados{calcularElTotal()}</p>
+          <p className="texto-centro">Total : {calculateTotal()}</p>
           </div>
       ) : (
         <p className="texto-centro">No hay productos</p>
