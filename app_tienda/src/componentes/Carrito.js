@@ -1,9 +1,10 @@
 import React from "react";
 import "./../App.css";
-import { useCart } from "../CartContext"; // Import useCart
+import { useCart } from "../CartContext";
 
 const Carrito = () => {
-  const { cart, calculateTotal } = useCart(); // Use Cart Context
+  const { cart } = useCart();
+
   return (
     <div>
       <h1 className="texto-centro">Carrito</h1>
@@ -14,9 +15,8 @@ const Carrito = () => {
               <p className="carrito-p">{producto.nombre}</p>
               Cantidad {producto.quantity}
             </div>
-          ))}
-          <p className="texto-centro">Total : {calculateTotal()}</p>
-          </div>
+          );
+        })
       ) : (
         <p className="texto-centro">No hay productos</p>
       )}
