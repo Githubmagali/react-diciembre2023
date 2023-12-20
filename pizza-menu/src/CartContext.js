@@ -1,24 +1,21 @@
-import React, { createContext, useState, useContext } from 'react';
+import React, { createContext, useState, useContext, useEffect } from "react";
 
-// Create the context
 const CartContext = createContext();
 
-// Define a provider for the context
 export const CartProvider = ({ children }) => {
   const [cart, setCart] = useState([]);
+  const [totalCost, setTotalCost] = useState(0);
 
   const addToCart = (item) => {
     setCart((prevCart) => {
-      const itemExists = prevCart.find(cartItem => cartItem.id === item.id);
+      const itemExists = prevCart.find((cartItem) => cartItem.id === item.id);
       if (itemExists) {
-        // Increase the quantity if the item already exists
-        return prevCart.map(cartItem =>
+        return prevCart.map((cartItem) =>
           cartItem.id === item.id
             ? { ...cartItem, quantity: cartItem.quantity + 1 }
             : cartItem
         );
       } else {
-        // Add the new item with a quantity of 1
         return [...prevCart, { ...item, quantity: 1 }];
       }
     });
@@ -26,30 +23,38 @@ export const CartProvider = ({ children }) => {
 
   const removeFromCart = (itemId) => {
     setCart((prevCart) => {
-      const itemExists = prevCart.find(cartItem => cartItem.id === itemId);
+      const itemExists = prevCart.find((cartItem) => cartItem.id === itemId);
       if (itemExists && itemExists.quantity > 1) {
-        // Decrease the quantity if more than 1
-        return prevCart.map(cartItem =>
+        return prevCart.map((cartItem) =>
           cartItem.id === itemId
             ? { ...cartItem, quantity: cartItem.quantity - 1 }
             : cartItem
         );
       } else {
-        // Remove the item if quantity is 1
-        return prevCart.filter(cartItem => cartItem.id !== itemId);
+        return prevCart.filter((cartItem) => cartItem.id !== itemId);
       }
     });
   };
 
-  // Provide the cart and functions to manipulate it
+  useEffect(() => {
+    const updateTotalCost = () => {
+      const total = cart.reduce((acc, currentItem) => {
+        return acc + currentItem.price * currentItem.quantity;
+      }, 0);
+      setTotalCost(total);
+    };
+    updateTotalCost();
+  }, [cart]);
+
   return (
-    <CartContext.Provider value={{ cart, addToCart, removeFromCart }}>
+    <CartContext.Provider
+      value={{ cart, addToCart, removeFromCart, totalCost }}
+    >
       {children}
     </CartContext.Provider>
   );
 };
 
-// Custom hook to use the cart context
 export const useCart = () => {
   return useContext(CartContext);
 };
