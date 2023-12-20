@@ -44,7 +44,7 @@ export const CartProvider = ({ children }) => {
       setTotalCost(total);
     };
     updateTotalCost();
-  }, [cart]);
+  }, [cart, updateTotalCost]);
 
   return (
     <CartContext.Provider

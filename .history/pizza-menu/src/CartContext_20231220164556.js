@@ -1,4 +1,4 @@
-import React, { createContext, useState, useContext, useEffect } from "react";
+import React, { createContext, useState, useContext } from "react";
 
 const CartContext = createContext();
 
@@ -19,6 +19,7 @@ export const CartProvider = ({ children }) => {
         return [...prevCart, { ...item, quantity: 1 }];
       }
     });
+    updateTotalCost();
   };
 
   const removeFromCart = (itemId) => {
@@ -36,15 +37,12 @@ export const CartProvider = ({ children }) => {
     });
   };
 
-  useEffect(() => {
-    const updateTotalCost = () => {
-      const total = cart.reduce((acc, currentItem) => {
-        return acc + currentItem.price * currentItem.quantity;
-      }, 0);
-      setTotalCost(total);
-    };
-    updateTotalCost();
-  }, [cart]);
+  const updateTotalCost = () => {
+    const total = cart.reduce((acc, currentItem) => {
+      return acc + currentItem.price * currentItem.quantity;
+    }, 0);
+    setTotalCost(total);
+  };
 
   return (
     <CartContext.Provider

@@ -36,13 +36,14 @@ export const CartProvider = ({ children }) => {
     });
   };
 
+  const updateTotalCost = () => {
+    const total = cart.reduce((acc, currentItem) => {
+      return acc + currentItem.price * currentItem.quantity;
+    }, 0);
+    setTotalCost(total);
+  };
+
   useEffect(() => {
-    const updateTotalCost = () => {
-      const total = cart.reduce((acc, currentItem) => {
-        return acc + currentItem.price * currentItem.quantity;
-      }, 0);
-      setTotalCost(total);
-    };
     updateTotalCost();
   }, [cart]);
 

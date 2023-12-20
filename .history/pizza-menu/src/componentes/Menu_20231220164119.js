@@ -36,7 +36,6 @@ const pizzaData = [
     soldOut: false,
   },
   {
-    id: 5,
     name: "Pizza Salamino",
     ingredients: "Tomato, mozarella, and pepperoni",
     price: 15,
@@ -44,7 +43,6 @@ const pizzaData = [
     soldOut: true,
   },
   {
-    id: 6,
     name: "Pizza Prosciutto",
     ingredients: "Tomato, mozarella, ham, aragula, and burrata cheese",
     price: 18,

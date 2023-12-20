@@ -1,8 +1,8 @@
 import React from "react";
-import { useCart } from "../CartContext";
+import { useCart } from "../CartContext"; // Import useCart
 
 function PizzaItem({ pizzaObj }) {
-  const { addToCart } = useCart();
+  const { addToCart } = useCart(); 
 
   return (
     <li className={`pizza ${pizzaObj.soldOut ? "sold-out" : ""}`}>
