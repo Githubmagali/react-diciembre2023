@@ -2,7 +2,7 @@ import React from "react";
 import { useCart } from "../CartContext";
 
 function PizzaItem({ pizzaObj }) {
-  const { addToCart } = useCart();
+  const { addToCart, removeFromCart } = useCart();
 
   return (
     <li className={`pizza ${pizzaObj.soldOut ? "sold-out" : ""}`}>
@@ -12,8 +12,13 @@ function PizzaItem({ pizzaObj }) {
         <p>{pizzaObj.ingredients}</p>
         <span>{pizzaObj.soldOut ? "SOLD OUT" : `$ ${pizzaObj.price}`}</span>
         {!pizzaObj.soldOut && (
-          <button onClick={() => addToCart(pizzaObj)}>Add to Cart</button>
+            <>
+            <button onClick={() => addToCart(pizzaObj)}>Add to Cart</button>
+            <button onClick={() => removeFromCart(pizzaObj.id)}>Remove from Cart</button>
+          </>
+    
         )}
+       
       </div>
     </li>
   );

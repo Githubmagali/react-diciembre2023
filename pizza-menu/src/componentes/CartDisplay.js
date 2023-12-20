@@ -6,19 +6,19 @@ const CartDisplay = () => {
 
   return (
     <div className="cart-display">
-      <h3>Your Cart</h3>
+      <h2>Your Cart</h2>
       {cart.length > 0 ? (
-        <ul>
+        <ul >
           {cart.map((item, index) => (
-            <li key={index}>
+            <li key={index}className="cart-items">
               {item.name} - {item.quantity} x ${item.price}
             </li>
           ))}
         </ul>
       ) : (
-        <p>No items in cart.</p>
+        <p className="cart-p">No items in cart.</p>
       )}
-      <p>Total Cost: ${totalCost}</p>
+      <p className="cart-p-total">Total Cost: ${totalCost}</p>
     </div>
   );
 };
