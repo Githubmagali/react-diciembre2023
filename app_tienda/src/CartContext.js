@@ -40,10 +40,17 @@ export const CartProvider = ({ children }) => {
       }
     });
   };
+   
+  const calculateTotal = () => {
+    return cart.reduce((total, item) => {
+      return total + item.quantity; // Puedes ajustar esto según la lógica de tu aplicación
+    }, 0);
+  };
+
 
   // Provide the cart and functions to manipulate it
   return (
-    <CartContext.Provider value={{ cart, addToCart, removeFromCart }}>
+    <CartContext.Provider value={{ cart, addToCart, removeFromCart, calculateTotal }}>
       {children}
     </CartContext.Provider>
   );
