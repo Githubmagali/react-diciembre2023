@@ -1,0 +1,72 @@
+.App {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* Ajusta la altura al 100% de la altura de la ventana */
+}
+
+
+.steps-div{
+  display: flex;
+  justify-content: center;
+  margin-left: 0,2px;
+  
+}
+
+.steps-close {
+  background-color: transparent;
+  border: none;
+  color: rgb(12, 11, 11);
+  font-size: 20px;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 70px;
+}
+
+
+
+.steps-button{
+  margin: 100px;
+  padding: 4px;
+  cursor: pointer;
+  border-radius: 10px;
+  border-color: aliceblue;
+  
+}
+
+.message img {
+  width: 200px; 
+  height: auto; /* Mantiene la proporción original de la imagen */
+}
+
+.active-number {
+  background-color: #22618b; /* Color de fondo para el número activo */
+  color: #fff; /* Color del texto para el número activo */
+  padding: 5px 10px; /* Ajusta el relleno según sea necesario */
+  margin: 0 5px; /* Ajusta el margen según sea necesario */
+  border-radius: 5px; /* Bordes redondeados */
+}
+
+
+.active-number:hover {
+  background-color: #45494d; 
+}
+
+
+.active-number-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+ 
+  margin: 0 5px;
+  cursor: pointer; 
+}
+
+.message{
+  text-align: center;
+}
