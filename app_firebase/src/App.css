@@ -1,0 +1,121 @@
+.app-header {
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @media(max-width: 60rem) {
+    /* 950px */
+    justify-content: start;
+  }
+}
+
+.app-contenedor-header {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  margin-top:30px;
+
+  @media(max-width: 60rem) {
+    /* 950px */
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+
+   
+  }
+}
+
+.app-titulo {
+  font-weight: normal;
+  text-transform: uppercase;
+  font-size: 2.5rem;
+  /* 40px */
+
+  @media(max-width: 60rem) {
+    /* 950px */
+    font-size: 2rem;
+    /* 32px */
+  }
+}
+
+
+
+.app-contenedor-botones {
+  display: flex;
+  gap: 10px; /* Ajusta el espacio entre los NavLink*/
+}
+
+/* Estilo específico para los NavLink */
+.app-contenedor-botones a {
+  text-decoration: none;
+  padding: 15px 8px 9px 4px;
+  color: #333; 
+  background-color: #eee; /* Color de fondo */
+  border-radius: 5px;
+  text-align: center;
+}
+
+/* Estilo cuando el NavLink está activo (puede variar según tu diseño) */
+.app-contenedor-botones a.active {
+  background-color: #929599; /* Cambia el color de fondo cuando el NavLink está activo */
+  color: #fff; /* Cambia el color del texto cuando el NavLink está activo */
+}
+
+
+/* Registro de usuario  e iniciar sesion */
+
+.registro-inicio{
+  text-align: right;
+  margin: 30px;
+  font-size: 20px;
+  color: #000;
+}
+.registro-inicio a{
+  text-decoration: none;
+  margin: 20px;
+  padding: 15px 8px 9px 4px;
+  color: #333; 
+  background-color: #eee; /* Color de fondo */
+  border-radius: 5px;
+  text-align: center;
+}
+
+.registro-inicio a.active{
+  background-color: #929599; /* Cambia el color de fondo cuando el NavLink está activo */
+  color: #fff;
+}
+
+.registro-contenedor-principal{
+  margin-bottom: 70px;
+}
+
+.registro-formulario{
+  padding: 0 2.5rem; /* 40px */
+height: 100%;
+display: flex;
+flex-direction: column;
+justify-content: space-around;
+
+}
+
+.registro-input{
+  width: 100%;
+  text-align: center;
+  padding: 2.5rem 0;
+  font-family: 'Work Sans', sans-serif;
+ 
+  font-size: 2.5rem; /* 40px */
+    text-transform: uppercase;
+    border: none;
+    border-bottom: 2px;
+
+}
+.registro-enviar{
+  text-align: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 20px;
+ 
+}
