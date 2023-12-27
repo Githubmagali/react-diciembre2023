@@ -12,6 +12,7 @@ const Alerta = ({ tipo, mensaje, estadoAlerta, setEstadoAlerta }) => {
     }
 
     return () => clearTimeout(tiempo);
+    //cada vez que el componente se monte o las dependencias cambien
   }, [estadoAlerta, setEstadoAlerta]);
 
   return (

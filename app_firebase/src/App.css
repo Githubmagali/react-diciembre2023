@@ -64,7 +64,7 @@
 }
 
 
-/* Registro de usuario  e iniciar sesion */
+/* Registro de usuario */
 
 .registro-inicio{
   text-align: right;
@@ -118,4 +118,36 @@ justify-content: space-around;
   color: #000;
   font-size: 20px;
  
+}
+
+/*Iniciar sesion */
+
+.inicio-sesion-contenedor-principal {
+  margin-bottom: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Esto hace que el contenedor ocupe el 100% de la altura de la pantalla */
+  
+}
+
+.inicio-sesion-formulario {
+  display: flex;
+  flex-direction: column; /* Cambia la dirección del eje principal a columna */
+  align-items: center; /* Centra los elementos en el eje transversal */
+  width: 100%; /* Ajusta el ancho del formulario según tus necesidades */
+}
+
+.inicio-sesion-input {
+  width: 100%;
+  padding: 10px; /* Añade relleno para mejorar la apariencia */
+  box-sizing: border-box; /* Incluye el relleno y el borde en el ancho y alto total */
+  margin-bottom: 10px; /* Añade espacio entre los inputs */
+ text-align: center;
+}
+
+.inicio-sesion-enviar{
+  margin-top: 40px;
+  text-decoration: none;
+  color: #000;
 }
