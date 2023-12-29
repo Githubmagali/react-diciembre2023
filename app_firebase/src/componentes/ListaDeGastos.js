@@ -1,6 +1,7 @@
 import React from "react";
 import { Helmet } from "react-helmet";
 import { NavLink } from "react-router-dom";
+import BotonCerrarSesion from "./BotonCerrarSesion";
 
 const ListaDeGastos =()=>{
     return(
@@ -15,6 +16,7 @@ const ListaDeGastos =()=>{
           <NavLink to="/categorias">Categorias</NavLink>
           <NavLink to="/lista">Lista de gastos</NavLink>
           <NavLink to="/">Inicio</NavLink>
+          <BotonCerrarSesion />
         </div>
 
       </div>

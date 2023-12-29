@@ -47,6 +47,11 @@ const IniciarSesion = () => {
 
         try{
             await signInWithEmailAndPassword(auth, correo, password);
+            setEstadoAlerta(true);
+            setAlerta({
+                tipo: 'exito',
+                mensaje: 'Ingreso de sesion exitosa'
+            });
             setTimeout(()=>navigate('/'), 4000);
         }
         catch(error){

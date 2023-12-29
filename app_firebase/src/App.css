@@ -151,3 +151,93 @@ justify-content: space-around;
   text-decoration: none;
   color: #000;
 }
+
+.boton-cerrar-sesion{
+  border-radius: 5px;
+  border: none;
+}
+  
+  /*Formulario gasto */
+
+  .formulario-gasto {
+    display: flex;
+  flex-direction: column;
+  align-items: center; /* Centra los elementos a lo largo del eje transversal (vertical) */
+  justify-content: center; /* Centra los elementos a lo largo del eje principal (horizontal) */
+  height: 100vh;
+  }
+  
+  .div-select {
+    align-self: flex-end; 
+    margin: 20px;
+    margin-right: auto; /* Empuja a la izquierda tanto como sea posible */
+  }
+  
+  .input-formulario-gasto {
+    width: 100%;
+    margin: 0 20px;
+    
+  }
+  
+  .input-formulario-gasto input {
+    width: calc(100% - 40px); /* Ocupa todo el ancho disponible menos el margen de 20px a cada lado */
+    margin-bottom: 10px;
+    height: 50px;
+    
+  }
+  
+  .boton-formulario-gasto {
+    text-decoration: none;
+    padding: 15px 8px 9px 4px;
+    color: #333; 
+    background-color: #eee; /* Color de fondo */
+    border-radius: 5px;
+    text-align: center;
+    border:none;
+    padding: 20px;
+    cursor: pointer;
+    
+  }
+  
+
+  /* Estilos para SelectCategorias */
+
+.contenedor-select{
+  cursor: pointer;
+  border-radius: 0.625rem; /* 10px */
+  position: relative;
+  height: 5rem; /* 80px */
+  width: 100%;
+  padding: 0px 1.25rem; /* 20px */
+  font-size: 12px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  transition: .5s ease all;
+  
+}
+
+.select-categorias{
+  position: absolute;
+  top: 5.62rem; /* 90px */
+  left: 0;
+  width: 100%;
+  border-radius: 0.625rem; /* 10px */
+  max-height: 18.75rem; /* 300px */
+  overflow-y: auto;
+  background-color: #ffffff;
+}
+
+.opciones-categorias{
+  padding: 1.25rem; /* 20px */
+  display: flex;
+}
+
+.opcion-seleccionada-select{
+  width: 100%;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+}
