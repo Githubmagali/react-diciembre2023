@@ -23,11 +23,12 @@ const FormularioGasto = ()=>{
     return(
         <form onSubmit={handleSubmit} className="formulario-gasto">
             <div className="div-select">
-                <SelectCategorias categoria={categoria} setCategoria={setCategoria}/>
+                <SelectCategorias categoria={categoria} setCategoria={setCategoria} className="select-categorias"/>
+                <div>div</div>
             </div>
-            <div className="input-formulario-gasto">
-                <input type="text" name="descripcion" id="descripcion" placeholder="Descripcion" value={inputDescripcion} onChange={handleChange}/>
-                <input  type="text" name="valor" id="valor" placeholder="$0,00" value={inputCantidad} onChange={handleChange}/>
+            <div>
+                <input className="input-formulario-gasto"type="text" name="descripcion" id="descripcion" placeholder="Descripcion" value={inputDescripcion} onChange={handleChange}/>
+                <input className="input-formulario-gasto" type="text" name="valor" id="valor" placeholder="$0,00" value={inputCantidad} onChange={handleChange}/>
             </div>
             <button as="button" type="submit" className="boton-formulario-gasto">Enviar</button>
         </form>

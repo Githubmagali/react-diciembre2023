@@ -15,7 +15,7 @@
   width: 90%;
   display: flex;
   justify-content: space-between;
-  margin-top:30px;
+  margin-top: 30px;
 
   @media(max-width: 60rem) {
     /* 950px */
@@ -23,7 +23,7 @@
     flex-direction: column-reverse;
     align-items: center;
 
-   
+
   }
 }
 
@@ -44,80 +44,90 @@
 
 .app-contenedor-botones {
   display: flex;
-  gap: 10px; /* Ajusta el espacio entre los NavLink*/
+  gap: 10px;
+  /* Ajusta el espacio entre los NavLink*/
 }
 
 /* Estilo específico para los NavLink */
 .app-contenedor-botones a {
   text-decoration: none;
   padding: 15px 8px 9px 4px;
-  color: #333; 
-  background-color: #eee; /* Color de fondo */
+  color: #333;
+  background-color: #eee;
+  /* Color de fondo */
   border-radius: 5px;
   text-align: center;
 }
 
 /* Estilo cuando el NavLink está activo (puede variar según tu diseño) */
 .app-contenedor-botones a.active {
-  background-color: #929599; /* Cambia el color de fondo cuando el NavLink está activo */
-  color: #fff; /* Cambia el color del texto cuando el NavLink está activo */
+  background-color: #929599;
+  /* Cambia el color de fondo cuando el NavLink está activo */
+  color: #fff;
+  /* Cambia el color del texto cuando el NavLink está activo */
 }
 
 
 /* Registro de usuario */
 
-.registro-inicio{
+.registro-inicio {
   text-align: right;
   margin: 30px;
   font-size: 20px;
   color: #000;
 }
-.registro-inicio a{
+
+.registro-inicio a {
   text-decoration: none;
   margin: 20px;
   padding: 15px 8px 9px 4px;
-  color: #333; 
-  background-color: #eee; /* Color de fondo */
+  color: #333;
+  background-color: #eee;
+  /* Color de fondo */
   border-radius: 5px;
   text-align: center;
 }
 
-.registro-inicio a.active{
-  background-color: #929599; /* Cambia el color de fondo cuando el NavLink está activo */
+.registro-inicio a.active {
+  background-color: #929599;
+  /* Cambia el color de fondo cuando el NavLink está activo */
   color: #fff;
 }
 
-.registro-contenedor-principal{
+.registro-contenedor-principal {
   margin-bottom: 70px;
 }
 
-.registro-formulario{
-  padding: 0 2.5rem; /* 40px */
-height: 100%;
-display: flex;
-flex-direction: column;
-justify-content: space-around;
+.registro-formulario {
+  padding: 0 2.5rem;
+  /* 40px */
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 
 }
 
-.registro-input{
+.registro-input {
   width: 100%;
   text-align: center;
   padding: 2.5rem 0;
   font-family: 'Work Sans', sans-serif;
- 
-  font-size: 2.5rem; /* 40px */
-    text-transform: uppercase;
-    border: none;
-    border-bottom: 2px;
+
+  font-size: 2.5rem;
+  /* 40px */
+  text-transform: uppercase;
+  border: none;
+  border-bottom: 2px;
 
 }
-.registro-enviar{
+
+.registro-enviar {
   text-align: center;
   text-decoration: none;
   color: #000;
   font-size: 20px;
- 
+
 }
 
 /*Iniciar sesion */
@@ -127,113 +137,165 @@ justify-content: space-around;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh; /* Esto hace que el contenedor ocupe el 100% de la altura de la pantalla */
-  
+  height: 100vh;
+  /* Esto hace que el contenedor ocupe el 100% de la altura de la pantalla */
+
 }
 
 .inicio-sesion-formulario {
   display: flex;
-  flex-direction: column; /* Cambia la dirección del eje principal a columna */
-  align-items: center; /* Centra los elementos en el eje transversal */
-  width: 100%; /* Ajusta el ancho del formulario según tus necesidades */
+  flex-direction: column;
+  /* Cambia la dirección del eje principal a columna */
+  align-items: center;
+  /* Centra los elementos en el eje transversal */
+  width: 100%;
+  /* Ajusta el ancho del formulario según tus necesidades */
 }
 
 .inicio-sesion-input {
   width: 100%;
-  padding: 10px; /* Añade relleno para mejorar la apariencia */
-  box-sizing: border-box; /* Incluye el relleno y el borde en el ancho y alto total */
-  margin-bottom: 10px; /* Añade espacio entre los inputs */
- text-align: center;
+  padding: 10px;
+  /* Añade relleno para mejorar la apariencia */
+  box-sizing: border-box;
+  /* Incluye el relleno y el borde en el ancho y alto total */
+  margin-bottom: 10px;
+  /* Añade espacio entre los inputs */
+  text-align: center;
 }
 
-.inicio-sesion-enviar{
+.inicio-sesion-enviar {
   margin-top: 40px;
   text-decoration: none;
   color: #000;
 }
 
-.boton-cerrar-sesion{
+.boton-cerrar-sesion {
   border-radius: 5px;
   border: none;
 }
-  
-  /*Formulario gasto */
 
-  .formulario-gasto {
-    display: flex;
+/*Formulario gasto */
+
+.formulario-gasto {
+  padding: 0 2.5rem; /* 40px */
+  height: 100%;
+  display: flex;
   flex-direction: column;
-  align-items: center; /* Centra los elementos a lo largo del eje transversal (vertical) */
-  justify-content: center; /* Centra los elementos a lo largo del eje principal (horizontal) */
-  height: 100vh;
+  justify-content: space-around;
+  input {
+      width: 80%;
+      text-align: center;
+      padding: 20px;
+      font-family: 'Work Sans', sans-serif;
+      &::placeholder {
+          color: rgba(0,0,0,.2);
+      }
   }
-  
-  .div-select {
-    align-self: flex-end; 
-    margin: 20px;
-    margin-right: auto; /* Empuja a la izquierda tanto como sea posible */
-  }
-  
-  .input-formulario-gasto {
-    width: 100%;
-    margin: 0 20px;
-    
-  }
-  
-  .input-formulario-gasto input {
-    width: calc(100% - 40px); /* Ocupa todo el ancho disponible menos el margen de 20px a cada lado */
-    margin-bottom: 10px;
-    height: 50px;
-    
-  }
-  
-  .boton-formulario-gasto {
-    text-decoration: none;
-    padding: 15px 8px 9px 4px;
-    color: #333; 
-    background-color: #eee; /* Color de fondo */
-    border-radius: 5px;
-    text-align: center;
-    border:none;
-    padding: 20px;
-    cursor: pointer;
-    
-  }
-  
 
-  /* Estilos para SelectCategorias */
+  @media(max-width: 60rem){ /* 950px */
+      justify-content: start;
+  }
+}
+.input-formulario-gasto{
+  font-size: 20px;
+  text-transform: uppercase;
+  border: none;
+  border-bottom: 2px solid;
+  outline: none;
 
-.contenedor-select{
-  cursor: pointer;
-  border-radius: 0.625rem; /* 10px */
-  position: relative;
-  height: 5rem; /* 80px */
+  @media(max-width: 60rem){ /* 950px */
+      font-size: 2.2rem; /* 24px */
+  }
+}
+
+
+.div-select {
+  display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.87rem; /* 30px */
+ 
+    @media(max-width: 60rem){ /* 950px */
+        flex-direction: column;
+ 
+        & > * {
+            width: 100%;
+            margin-bottom: 0.62rem; /* 10px */
+        }
+    }
+}
+
+.select-categorias {
+  margin-right: auto;
+}
+
+.input-formulario-gasto {
   width: 100%;
-  padding: 0px 1.25rem; /* 20px */
+  margin: 0 20px;
+
+}
+
+.input-formulario-gasto input {
+  width: calc(100% - 40px);
+  /* Ocupa todo el ancho disponible menos el margen de 20px a cada lado */
+  margin-bottom: 10px;
+  height: 50px;
+
+}
+
+.boton-formulario-gasto {
+  text-decoration: none;
+  color: #333;
+  background-color: #eee;
+  border-radius: 5px;
+  text-align: center;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+
+}
+
+
+/* Estilos para SelectCategorias */
+
+.contenedor-select {
+  cursor: pointer;
+  border-radius: 0.625rem;
+  /* 10px */
+  position: relative;
+  height: 5rem;
+  /* 80px */
+  width: 100%;
+  padding: 0px 1.25rem;
+  /* 20px */
   font-size: 12px;
   text-align: center;
   display: flex;
   align-items: center;
   transition: .5s ease all;
-  
+
 }
 
-.select-categorias{
+.select-categorias {
   position: absolute;
-  top: 5.62rem; /* 90px */
+  top: 5.62rem;
+  /* 90px */
   left: 0;
   width: 100%;
-  border-radius: 0.625rem; /* 10px */
-  max-height: 18.75rem; /* 300px */
+  border-radius: 0.625rem;
+  /* 10px */
+  max-height: 18.75rem;
+  /* 300px */
   overflow-y: auto;
   background-color: #ffffff;
 }
 
-.opciones-categorias{
-  padding: 1.25rem; /* 20px */
+.opciones-categorias {
+  padding: 1.25rem;
+  /* 20px */
   display: flex;
 }
 
-.opcion-seleccionada-select{
+.opcion-seleccionada-select {
   width: 100%;
   text-transform: uppercase;
   display: flex;
