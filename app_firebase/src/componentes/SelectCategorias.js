@@ -14,7 +14,7 @@ const SelectCategorias = ({ categoria, setCategoria }) => {
         { id: 'compras', texto: 'Compras' },
         { id: 'diversion', texto: 'Diversion' }
     ]
-
+//currentTaget; porque el elemeto esta adentro de otro elemento
     const handleClick = (e) => {
         setCategoria(e.currentTarget.dataset.valor)
     }
