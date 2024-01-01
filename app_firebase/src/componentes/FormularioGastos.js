@@ -16,12 +16,13 @@ const FormularioGasto = () => {
     const [alerta, setAlerta] = useState({});
 
     const { usuario } = useAuth();
+  
 
     const handleChange = (e) => {
         if (e.target.name === 'descripcion') {
             setInputDescripcion(e.target.value);
         } else if (e.target.name === 'valor') {
-            setInputCantidad(e.target.value.replace(/[^0-9.]/g, ''))
+            setInputCantidad(e.target.value.replace(/[^0-9.]/g, ''));
         }
     }
 
@@ -29,6 +30,14 @@ const FormularioGasto = () => {
         e.preventDefault();
 
         let cantidad = parseFloat(inputCantidad).toFixed(2);
+        console.log('Usuario UID:', usuario.uid);
+        /*console.log('Submitting form with values:', {
+            categoria,
+            descripcion: inputDescripcion,
+            cantidad,
+            fecha: getUnixTime(fecha),
+            uidUsuario: usuario.uid
+        });*/
 
         //console.log(getUnixTime(fecha));
         //comprobamos que haya gastos para que lo agregue, evita que cuando el campo este vacio y hagamos click no 
@@ -38,6 +47,7 @@ const FormularioGasto = () => {
 
             //si tenemos una cantidad valida
             if (cantidad) {
+                console.log('Usuario UID:', usuario.uid);
                 agregarGasto({
                     categoria: categoria,
                     descripcion: inputDescripcion,
@@ -56,6 +66,7 @@ const FormularioGasto = () => {
                         setAlerta({ tipo: 'exito', mensaje: 'Ingreso exitoso' })
                     })
                     .catch((error) => {
+                        console.error('Error al agregar gasto:', error);
                         setEstadoAlerta(true);
                         setAlerta({ tipo: 'error', mensaje: 'Hubo un error' })
                     })

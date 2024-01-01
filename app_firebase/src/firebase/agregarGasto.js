@@ -2,8 +2,10 @@ import {db} from './firebaseConfig';
 import { collection, addDoc } from 'firebase/firestore';
 
 
-const agregarGasto = ({ categoria, descripcion, cantidad, fecha, uidUsuario})=>{
-    return addDoc(collection(db,' gastos'),{
+const agregarGasto = ({categoria, descripcion, cantidad, fecha, uidUsuario})=>{
+    //uidUsuario = uidUsuario.trim();
+    //console.log('UID en agregarGasto:', uidUsuario);
+    return addDoc(collection(db, 'gastos'),{
         categoria: categoria,
         descripcion: descripcion,
         cantidad: Number(cantidad),
@@ -11,7 +13,7 @@ const agregarGasto = ({ categoria, descripcion, cantidad, fecha, uidUsuario})=>{
         uidUsuario: uidUsuario
     });
 
-}
+};
 
 
 export default agregarGasto;

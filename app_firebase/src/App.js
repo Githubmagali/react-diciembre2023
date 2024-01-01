@@ -4,6 +4,7 @@ import { Helmet } from 'react-helmet';
 import { NavLink } from 'react-router-dom';
 import BotonCerrarSesion from './componentes/BotonCerrarSesion';
 import FormularioGasto from './componentes/FormularioGastos';
+import BarraTotalGastado from './componentes/BarraTotalGastado';
 
 
 function App() {
@@ -26,7 +27,7 @@ function App() {
       </div>
     </div>
     <FormularioGasto />
-
+  <BarraTotalGastado />
     </>
   );
 }
