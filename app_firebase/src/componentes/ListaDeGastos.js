@@ -12,7 +12,7 @@ import borrarGasto from "../firebase/borrarGasto";
 const ListaDeGastos = () => {
 
   //extraigo el valor por eso lo tengo que encerrar entre parentesis
-  const [gastos] = useObtenerGastos();
+  const [gastos, obtenerMasGastos, hayMasPorCargar] = useObtenerGastos();
   //console.log(gastos);
   return (
     <>
@@ -30,8 +30,7 @@ const ListaDeGastos = () => {
           </div>
         </div>
       </div>
-      <div className="div-lista-de-gastos">
-
+      <ul className="div-lista-de-gastos">
         {gastos.map((gasto) => {
 
           return (
@@ -52,7 +51,17 @@ const ListaDeGastos = () => {
             </li>
           );
         })}
-      </div>
+        {hayMasPorCargar && 
+        <div className="div-cargar-mas-lista">
+        <button className="boton-cargar-mas-lista"onClick={()=>obtenerMasGastos()}>Ver mas</button>
+       </div>}
+        {gastos.length === 0 &&
+        <div className="contenedor-subtitulo-lista">
+          <div className="subtitulo-lista">No hay mas gastos por mostrar</div>
+          <Link to="/" className="link-lista">Agregar</Link>
+            </div>
+            }
+      </ul>
       <BarraTotalGastado />
     </>
   );
